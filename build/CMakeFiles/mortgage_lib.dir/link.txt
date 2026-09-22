@@ -1,0 +1,2 @@
+/usr/bin/ar qc libmortgage_lib.a CMakeFiles/mortgage_lib.dir/src/mortgage_calculator.cpp.o
+/usr/bin/ranlib libmortgage_lib.a

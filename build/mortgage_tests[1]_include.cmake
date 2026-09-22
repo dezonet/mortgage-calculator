@@ -1,0 +1,5 @@
+if(EXISTS "/workspaces/mortgage-calculator/build/mortgage_tests[1]_tests.cmake")
+  include("/workspaces/mortgage-calculator/build/mortgage_tests[1]_tests.cmake")
+else()
+  add_test(mortgage_tests_NOT_BUILT mortgage_tests_NOT_BUILT)
+endif()

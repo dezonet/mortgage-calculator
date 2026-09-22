@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/mortgage_tests.dir/tests/test_mortgage.cpp.o -o mortgage_tests  libmortgage_lib.a lib/libgtest_main.a lib/libgtest.a 
