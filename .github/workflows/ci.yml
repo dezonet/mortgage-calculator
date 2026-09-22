@@ -1,0 +1,26 @@
+name: C++ CI Pipeline
+
+# O workflow será executado em cada Push ou Pull Request para a branch main
+on:
+  push:
+    branches: [ "main", "develop" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest # Executa num ambiente Linux isolado da GitHub
+
+    steps:
+    - name: Checkout do código
+      uses: actions/checkout@v3
+
+    - name: Configurar o CMake
+      run: cmake -B build -S .
+
+    - name: Compilar o Projeto (Build)
+      run: cmake --build build
+
+    - name: Executar o Google Test (Report)
+      working-directory: ./build
+      run: ctest --output-on-failure
