@@ -29,3 +29,7 @@ target_link_libraries(mortgage_tests PRIVATE mortgage_lib gtest_main)
 # Descobrir os testes automaticamente para o CTest/VS Code
 include(GoogleTest)
 gtest_discover_tests(mortgage_tests)
+
+# Criar o programa principal (CLI)
+add_executable(mortgage_app src/main.cpp)
+target_link_libraries(mortgage_app PRIVATE mortgage_lib)
